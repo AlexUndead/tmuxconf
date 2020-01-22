@@ -5,7 +5,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'jistr/vim-nerdtree-tabs'
 
 " Colorschemes
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 " Grep
 " apt-get install silversearcher-ag
 Plug 'rking/ag.vim'
@@ -21,8 +22,8 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 syntax on
-colorscheme gruvbox 
-set background=dark
+colorscheme sublimemonokai 
+"set background=dark
 set number
 set hlsearch
 set incsearch
@@ -30,7 +31,8 @@ set showcmd
 set nobackup
 set noswapfile
 set tabpagemax=50
-set paste
+"set paste
+set mouse=a
 
 "настройки
 
@@ -51,13 +53,16 @@ imap <C-d> <esc>yypi
 
 "маппинг плагинов
 map <C-n> :NERDTreeToggle<CR>
-map <C-r> :NERDTreeFind<CR>
+map <C-F1> :NERDTreeFind<CR>
 nnoremap <Up>    <C-w>+
 nnoremap <Down>  <C-w>-
 nnoremap <Left>  <C-w><
 nnoremap <Right> <C-w>>
 map <C-l> :bn<CR>
 map <C-h> :bp<CR>
+vnoremap <C-C> "+pa
+vnoremap <C-c> "+y
+vnoremap <C-x> "+d
 "let g:ctrlp_map = '<c-p>
 "let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
